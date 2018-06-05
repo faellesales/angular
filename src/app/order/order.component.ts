@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validator, Validators, AbstractControl } from '@angular/forms';
 
 import { RadioOption } from '../shared/radio/radio-option.model';
-import { orderService } from './order.service';
+import { OrderService } from './order.service';
 import { CartItem } from '../restaurant-detail/shopping-cart/cart-item.model';
 import { Order, OrderItem } from './order.model';
 import { Router } from '@angular/router';
@@ -25,7 +25,7 @@ export class OrderComponent implements OnInit {
     {label: 'Cartão Refeição', value: 'REF'}
   ];
 
-  constructor(private orderService: orderService,
+  constructor(private orderService: OrderService,
               private router: Router,
               private formBuilder: FormBuilder) { }
 
